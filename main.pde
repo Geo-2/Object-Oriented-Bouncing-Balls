@@ -30,18 +30,6 @@ void draw()
     my_ball.draw();
 }
 
-void check_box_collision()
-{
-    if (hit_floor || hit_ceiling)
-    {
-        my_ball.bounce();
-    }
-    else if (hit_right_wall || hit_left_wall)
-    {
-        my_ball.set_spawn();
-    }
-}
-
 boolean hit_floor;
 boolean hit_ceiling;
 boolean hit_left_wall;
@@ -64,4 +52,16 @@ void make_collision_box(int x, int y, int size)
         hit_left_wall =    my_ball.edge(x, y,   x, y + size);
         hit_right_wall =   my_ball.edge(x + size, y,   x + size, y + size);
 
+}
+
+void check_box_collision()
+{
+    if (hit_floor || hit_ceiling)
+    {
+        my_ball.bounce();
+    }
+    else if (hit_right_wall || hit_left_wall)
+    {
+        my_ball.set_spawn();
+    }
 }
