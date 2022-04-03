@@ -4,12 +4,10 @@ class Ball
     int x;
     int y;
     
-    int size;
-
     // Construct the optional variables. 
-    Ball(int temp_size)
+    Ball()
     {
-        size = temp_size;
+
     }
 
     // random_direction. This is the built in function to move at a random angle, if you dont want to supply the randomness yourself. It is intended to go into the move function. 
@@ -129,7 +127,7 @@ class Ball
                 // strokeWeight(50);
                 line(_Ax, _Ay, _Bx, _By);
 
-    
+
             // Check distance. If the object is on the line, it is true. I will adjust it later, so it has a width line tolerence, by variable `size`.
                 if (object_distance == c)
                 {
@@ -147,6 +145,7 @@ class Ball
 
     void draw() 
     {
+        int size = 20;
         ellipse(x, y, size, size);
     }   
 

@@ -10,7 +10,7 @@ void setup()
         background(255);
 
     // Setting up objects. 
-        my_ball = new Ball(20);
+        my_ball = new Ball();
         my_ball.set_spawn();
 
 }
