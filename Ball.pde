@@ -48,7 +48,7 @@ class Ball
         // Test to see if the shape exceeds the boundaries of the screen
         // If it does, reverse its direction by multiplying by -1
         if (x > width-radius || x < radius) {
-            // xdirection *= -1;
+            xdirection *= -1;
             set_spawn();
         }
         if (y > height-radius || y < radius) {
