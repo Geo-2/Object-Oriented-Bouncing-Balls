@@ -59,29 +59,7 @@ class Ball
     // Edge Collison function. 
         // This function will check if the ball has reached the edges of the screen. It has the optional parameter of which edge of the screen. This returns a boolean. Yes, I could have used distance, but what about the orintation? This solves it without orientation.
 
-        boolean hit_floor;
-        boolean hit_ceiling;
-        boolean hit_left_wall;
-        boolean hit_right_wall;
 
-        void make_collision_box(int x, int y, int size)
-        {
-            // Correct like rectmode center
-
-                int half_size = size/2;
-
-                x = x - half_size;
-                y = y - half_size;
-            
-
-            // Check if ball hit Inside rectangle.
-
-                hit_ceiling = my_ball.edge(x, y,  x + size, y);
-                hit_floor =   my_ball.edge(x, y + size,   x + size, y + size);
-                hit_left_wall =    my_ball.edge(x, y,   x, y + size);
-                hit_right_wall =   my_ball.edge(x + size, y,   x + size, y + size);
-
-        }
         
 
         /*
