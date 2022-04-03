@@ -14,7 +14,6 @@ class Ball
     int radius;
 
 
-    // Construct the optional variables. 
     Ball()
     {
 
