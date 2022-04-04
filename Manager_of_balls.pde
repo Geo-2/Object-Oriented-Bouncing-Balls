@@ -1,6 +1,7 @@
 /*
 This is the director. It manages the ball. 
 
+Define your type of ball that you want to spawn. 
 
 */
 
@@ -10,14 +11,11 @@ class Manager_of_balls
     
     Manager_of_balls()
     {
+        
     }
 
-    // Interates, and checks each ball
-    // spawns the ball
-    // Destroys the ball.
-    // Updates the balls.
 
-    ArrayList<Class_Ball> initialize()
+    ArrayList<Class_Ball> initialize_array()
     {
         // Setup array only once.
         ArrayList<Class_Ball> array_balls;
