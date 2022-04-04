@@ -1,12 +1,16 @@
 
 Manager_of_balls manager;
 
+ArrayList<Class_Ball> array_balls;
+
 void setup() 
 {
     size(512, 512);
     background(255);
     
     manager = new Manager_of_balls();
+
+    array_balls = manager.initialize();
 }
 
 // Define
@@ -15,6 +19,6 @@ void setup()
 void draw() 
 {
     background(255);
-    manager.start();
-    delay(100);
+    manager.check(array_balls);
+    // delay(100);
 }

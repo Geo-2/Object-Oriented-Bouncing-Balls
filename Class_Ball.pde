@@ -4,6 +4,7 @@ class Class_Ball
     int x;
     int y;
 
+    int default_speed = 1;
     int xspeed;
     int yspeed;
 
@@ -13,12 +14,29 @@ class Class_Ball
 
     int radius;
 
+    Class_Ball(int temp_radius)
+    {
+
+        xspeed = default_speed;
+        yspeed = default_speed;
+
+        radius = temp_radius;
+    }
+
+    Class_Ball(int temp_xspeed, int temp_yspeed, int temp_radius)
+    {
+
+        xspeed = default_speed;
+        yspeed = default_speed;
+
+        radius = temp_radius;
+    }
 
     Class_Ball()
     {
 
-        xspeed = 10;
-        yspeed = 10;
+        xspeed = default_speed;
+        yspeed = default_speed;
 
         radius = 40;
     }
