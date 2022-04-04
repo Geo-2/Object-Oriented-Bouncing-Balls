@@ -36,7 +36,8 @@ class Class_Ball
         y = int(height/2 + random(-random, random));
     }
 
-    void collision_and_movement()
+
+    boolean collision_and_movement()
     {
         // Credit to https://processing.org/examples/bounce.html
 
@@ -44,15 +45,17 @@ class Class_Ball
         x = x + ( xspeed * xdirection );
         y = y + ( yspeed * ydirection );
         
-        // Test to see if the shape exceeds the boundaries of the screen
-        // If it does, reverse its direction by multiplying by -1
+        // Test to see if the shape exceeds the boundaries of the screen.
         if (x > width-radius || x < radius) {
             xdirection *= -1;
-            set_spawn();
+            return true;
         }
         if (y > height-radius || y < radius) {
             ydirection *= -1;
+            return false;
         }
+
+        return false;
 
     }
       
