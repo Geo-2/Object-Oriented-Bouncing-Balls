@@ -21,9 +21,5 @@ void setup()
 
 void draw() 
 {
-    // background(255);
 
-
-    println(array_balls);
 }
-
