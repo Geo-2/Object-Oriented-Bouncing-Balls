@@ -1,27 +1,29 @@
-Ball my_ball;
+ArrayList<Class_Ball> array_balls;
 
 void setup() 
 {
-    // Normal stuff.
-        size(512, 512);
+    size(512, 512);
+    background(255);
+    
+    array_balls = new ArrayList<Class_Ball>();
+    array_balls.add(new Class_Ball());
 
-        // size(100, 100);
+    Class_Ball ball = array_balls.get(0);
 
-        background(255);
 
-    // Setting up objects. 
-        my_ball = new Ball();
-        my_ball.set_spawn();
+    ball.set_spawn();
+    ball.draw();
 
 }
+
+// Define
 
 
 void draw() 
 {
-    background(255);
+    // background(255);
 
-    my_ball.collision_and_movement();
 
-    my_ball.draw();
+    println(array_balls);
 }
 
