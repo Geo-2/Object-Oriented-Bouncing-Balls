@@ -56,7 +56,6 @@ class Conduct_ball
 
     void draw() 
     {
-        background(255);    
 
 
         // if (my_ball.collides.simple())
