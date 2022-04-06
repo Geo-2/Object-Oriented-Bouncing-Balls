@@ -1,29 +1,47 @@
-Manager_of_balls manager;
+Class_Ball my_ball;
+Class_Ball.Collides my_ball_collides;
 
-ArrayList<Class_Ball> array_balls;
+int my_ball_speed;
+int my_ball_size;
+
+void construct_ball()
+{
+    // Outer class
+    my_ball = new Class_Ball(my_ball_speed, my_ball_size);
+    // Inner class
+    my_ball_collides = my_ball.new Collides();
+}
+
 
 void setup() 
 {
     size(512, 512);
-    background(255);
-    
-    // Hire A manager.
-    manager = new Manager_of_balls();
 
-    // Make the manager create the array.
-    array_balls = manager.initialize_array();
+    my_ball_speed = 10;
+    my_ball_size = 10;
+   
+    construct_ball();
 
-    // Make the manager spawn the balls.
-    manager.spawn_ball(array_balls);
+    my_ball.set_spawn();
 }
 
 
 void draw() 
 {
-    if (manager.balls_collide)
+    background(255);    
+
+
+    // if (my_ball.collides.simple())
+    // {
+    //     my_ball.bounce();
+    // }
+
+    if (my_ball_collides.spooky_x_bounce_y())
     {
-        println("Oy Administrator, the balls have collided!")
+        construct_ball();
+        my_ball.set_spawn();
     }
 
-    println("Nothing Happened yet.. Still moving them around...")
+    my_ball.move();
+    my_ball.draw();
 }
