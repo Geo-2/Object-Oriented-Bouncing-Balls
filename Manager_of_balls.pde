@@ -21,7 +21,7 @@ class Manager_of_balls
         ArrayList<Class_Ball> array_balls;
         array_balls = new ArrayList<Class_Ball>();
     
-        spawn_ball(array_balls);
+        // spawn_ball(array_balls);
 
         return array_balls;
     }
@@ -36,25 +36,33 @@ class Manager_of_balls
         return array_balls;
     }
 
-
-    void check(ArrayList<Class_Ball> array_balls)
+    ArrayList<Class_Ball> move_balls(ArrayList<Class_Ball> array_balls)
     {
-        Class_Ball single_ball = array_balls.get(0);
-
-        if (single_ball.collision_and_movement() == true)
+        // Go back in reverse order. 
+        for (int i=array_balls.size()-1; i>=0; i--)
         {
-            array_balls.remove(0);
+            single_ball = array_balls.get(i);
 
-            spawn_ball(array_balls);
-
-            println("True!!");
+            single_ball
         }
-        else 
+    }
+
+    boolean balls_collide(ArrayList<Class_Ball> array_balls)
+    {
+
+        for (int i = array_balls.size()-1; i >= 0 ; i--)
         {
-            single_ball.draw();
+            Class_Ball single_ball = array_balls.get(i);
+
+            if (single_ball.collision_and_movement() == true)
+            {
+                return true;
+            }
+
+            println(i);
+
         }
 
-        // for (int i = array_balls.size()-1; i >= 0 ; i--)
-
+        return false;
     }
 }

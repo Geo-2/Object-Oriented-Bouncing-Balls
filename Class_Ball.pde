@@ -26,8 +26,8 @@ class Class_Ball
     Class_Ball(int temp_xspeed, int temp_yspeed, int temp_radius)
     {
 
-        xspeed = default_speed;
-        yspeed = default_speed;
+        xspeed = temp_xspeed;
+        yspeed = temp_yspeed;
 
         radius = temp_radius;
     }

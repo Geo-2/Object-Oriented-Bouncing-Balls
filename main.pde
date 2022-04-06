@@ -12,12 +12,18 @@ void setup()
 
     // Make the manager create the array.
     array_balls = manager.initialize_array();
+
+    // Make the manager spawn the balls.
+    manager.spawn_ball(array_balls);
 }
 
 
 void draw() 
 {
-    background(255);
-    manager.check(array_balls);
-    // delay(100);
+    if (manager.balls_collide)
+    {
+        println("Oy Administrator, the balls have collided!")
+    }
+
+    println("Nothing Happened yet.. Still moving them around...")
 }
