@@ -6,16 +6,20 @@ void setup()
 
     my_array_balls = new Array_balls();
 
-    my_array_balls.add_ball(15, 5);
-    my_array_balls.add_ball(10, 10);
-    my_array_balls.add_ball(5, 15);
+    for (int size = 20; size > 0; size--)
+    {
+        for (int speed = 5; size > 0; size--)
+        {
+            my_array_balls.add_ball(speed, size);        
+        }
+    }
 }
 
 
 
 void draw() 
 {
-    background(255);    
+    // background(255);    
 
     my_array_balls.draw();
 

@@ -57,11 +57,13 @@ class Conduct_ball
     void draw() 
     {
 
-        if (my_ball_collides.spooky_x_bounce_y())
-        {
-            construct_ball();
-            my_ball.set_spawn();
-        }
+        my_ball_collides.bounce_x_bounce_y();
+
+        // if (my_ball_collides.spooky_x_bounce_y())
+        // {
+        //     construct_ball();
+        //     my_ball.set_spawn();
+        // }
 
         my_ball.move();
         my_ball.draw();
