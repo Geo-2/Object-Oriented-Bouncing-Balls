@@ -1,14 +1,14 @@
-
-ArrayList<Conduct_ball> array_balls = new ArrayList<Conduct_ball>();
-
+Array_balls my_array_balls;
 
 void setup() 
 {
     size(512, 512);
 
-    array_balls.add(new Conduct_ball(1));
-    array_balls.add(new Conduct_ball(1, 50));
-    
+    my_array_balls = new Array_balls();
+
+    my_array_balls.add_ball(15, 5);
+    my_array_balls.add_ball(10, 10);
+    my_array_balls.add_ball(5, 15);
 }
 
 
@@ -17,15 +17,6 @@ void draw()
 {
     background(255);    
 
-
-    for (int i = array_balls.size()-1; i >= 0; i = i - 1)
-    {
-        Conduct_ball single_conduct_ball = array_balls.get(i);
-
-
-        single_conduct_ball.draw();
-
-    }
-
+    my_array_balls.draw();
 
 }
