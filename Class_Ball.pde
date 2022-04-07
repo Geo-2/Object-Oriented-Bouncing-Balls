@@ -95,6 +95,19 @@ class Class_Ball
     class Collides
     {
 
+        // This function will bounce on all walls.
+        void bounce_x_bounce_y()
+        {
+            if (x > width-radius || x < radius) {
+                xdirection *= -1;
+            }
+            else if (y > height-radius || y < radius) {
+                ydirection *= -1;
+            }
+
+        }
+
+
         // If it hits the 'spooky' walls on the x axis, it will return true. Otherwise, it will bounce, then return false.
         // This name was a good memonic if the left and right walls are suspicious...
         boolean spooky_x_bounce_y()
